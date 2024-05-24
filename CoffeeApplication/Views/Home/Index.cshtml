@@ -1,0 +1,94 @@
+﻿@model CoffeeApplication.Data.Entities.Order
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    .hide-input {
+        display: none;
+    }
+</style>
+
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1>Our <span clsas="d-block">Services</span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-12" style="padding-top:45px; margin: 0 auto;">
+    <form asp-action="CreatOrder">
+
+        <div class="product-section">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                    <a class="product-item" href="/Home/Cart/">
+                        <img src="/images/Chocolate.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Hot Chocolate</h3>
+                        <strong class="product-price">R35.00</strong>
+                        <input type="hidden" value="3" asp-for="ProductId" />
+                        <input type="hidden" value="Green Tea" asp-for="Product.Name" />
+                        <input type="hidden" value="Pick and Pay" asp-for="Product.Supplier" />
+                        <input class="edit-input-tag hide-input" type="text" value="35" asp-for="Price" placeholder="Price"><br><br>
+                        <span class="icon-cross">                   
+                            <input type="submit" value="Order" class="btn btn-primary" />
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-1">
+                    <a class="product-item" href="/Home/Cart/">
+                        <img src="/Images/Tea.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Green Tea</h3>
+                        <strong class="product-price">R20.00</strong>
+                        <input type="hidden" value="2" asp-for="ProductId" />
+                        <input type="hidden" value="Green Tea" asp-for="Product.Name" />
+                        <input type="hidden" value="Pick and Pay" asp-for="Product.Supplier" />
+                        <input class="edit-input-tag hide-input" type="text" value="20" asp-for="Price" placeholder="Price"><br><br>
+                        <span class="icon-cross">
+                          
+                            <input type="submit" value="Order" class="btn btn-primary" />
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                    <a class="product-item" href="/Home/Cart/">
+                        <img src="/Images/Coffee.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Roiboos Tea</h3>
+                        <strong class="product-price">R30.00</strong>
+                        <input type="hidden" value="3" asp-for="ProductId" />
+                        <input type="hidden" value="Roiboos Tea" asp-for="Product.Name" />
+                        <input type="hidden" value="Pick and Pay" asp-for="Product.Supplier" />
+                        <input class="edit-input-tag hide-input" type="text" value="30" asp-for="Price" placeholder="Supplier"><br><br>
+                        <span class="icon-cross">
+             
+                            <input type="submit" value="Order" class="btn btn-primary" />
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                    <a class="product-item" href="/Home/Cart/">
+                        <img src="/Images/mug.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Mug/Cup</h3>
+                        <strong class="product-price">R100.00</strong>
+                        <input type="hidden" value="4" asp-for="ProductId" />
+                        <input type="hidden" value="Mug" asp-for="Product.Name" />
+                        <input type="hidden" value="Pick and Pay" asp-for="Product.Supplier" />
+                        <input class="edit-input-tag hide-input" type="text" value="30" asp-for="Price" placeholder="Supplier"><br><br>
+                        <span class="icon-cross">
+                            <input type="submit" value="Order" class="btn btn-primary" />
+                        </span>
+                    </a>
+                </div>
+               
+            <div class="form-group" style="padding-top:20px">
+            </div>
+    </form>
+</div>
